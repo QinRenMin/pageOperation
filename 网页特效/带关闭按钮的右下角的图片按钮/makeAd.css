@@ -1,0 +1,14 @@
+.div{
+    border: 1px solid black;
+    z-index: 99999;
+    width: 180px;
+    position: absolute;
+    height: 116px;
+    background-color: aquamarine;
+
+}
+.table{
+    width: 100%;
+    border: 0;
+
+}
