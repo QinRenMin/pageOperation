@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隐藏或者显示元素</title>
+</head>
+<body style="text-align: center">
+<p id="myConcent">
+    <input type="button" value="隐藏或者显示" onclick="ShowOrHidden();">
+    <br/>
+    <img src="three.jpg" id="myImg" width="100" height="100"/>
+</p>
+<script language="JavaScript">
+    function ShowOrHidden() {
+        var myImg = document.getElementById("myImg");
+        var display= myImg.style.display;//当前样式
+        if(display==='none'){
+            myImg.style.display='';
+        }
+        else{
+            myImg.style.display='none';
+        }
+    }
+</script>
+</body>
+</html>

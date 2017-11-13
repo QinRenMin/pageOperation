@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒排序子元素</title>
+</head>
+<body style="text-align: center">
+<ul style="list-style: none">
+    <li>itme1</li>
+    <li>itme2</li>
+    <li>itme3</li>
+    <li>itme4</li>
+</ul>
+<br/>
+<input type="button" value="倒序" onclick="deleteChilds()">
+</body>
+<script language="JavaScript">
+    function deleteChilds() {
+        var ul = document.getElementsByTagName("UL")[0];//获取父级DOM
+        var arr = [];
+        var len = ul.childNodes.length;
+        if(ul.hasChildNodes()){
+            for(var i = 0; i <len;i++){
+                arr[i] = ul.childNodes[0];//把节点存入数组
+                ul.removeChild(ul.childNodes[0]);//从第一个节点开始删除元素
+            }
+            for(var j= len-1;j>=0;j--){
+                ul.appendChild(arr[j]);//添加UL为子元素
+            }
+        }
+    }
+</script>
+</html>

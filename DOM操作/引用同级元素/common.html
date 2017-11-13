@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>引用同级元素</title>
+</head>
+<body style="text-align: center">
+<p>
+    <input type="button" value="获取同级的value" onclick="getLevelBtnVal(this);">
+    <input type="button" value="获取同级的value2" onclick="getLevelBtnVal(this);">
+</p>
+<script language="JavaScript">
+    function getLevelBtnVal(btn) {
+        var p = btn.parentNode;//通过单击按钮获得它的父节点
+        var children = p.childNodes;//得到父节点的所有子节点
+        //遍历子节点
+        for(var i = 0; i < children.length; i++){
+            if(children[i]!==btn&&children[i].nodeType===btn.nodeType){
+                alert(children[i].value);
+            }
+        }
+    }
+</script>
+</body>
+</html>
